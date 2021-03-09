@@ -1,0 +1,113 @@
+body{
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 20px;	
+  background: url(assets/alkony.jpeg) no-repeat fixed;
+	background-size: cover;
+}
+.card
+{
+    position: absolute;
+    border-radius: 10px;
+	  border: 10px solid yellow;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 500px;
+    background: #000;
+}
+
+.card .image{
+    border-radius: 10px;
+	  border: 5px solid black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.card .image img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: .5s;
+}
+
+.card:hover .image img{
+    opacity: .5;
+    transform: translateX(30%);
+}
+
+.card .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background:#DDA0DD;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(0deg);
+}
+
+.card:hover .details{
+    transform: perspective(2000px) rotateY(-70deg);
+}
+
+.card .details .center{
+    padding: 20px;
+    text-align: center;
+    background: #FFF0F5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card .details .center h1{
+    margin: 0;
+    padding: 0;
+    color:#BA55D3;
+    line-height: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.card .details .center h1 span{
+    font-size: 14px;
+    color: #BA55D3;
+}
+
+.card .details .center h1 p{
+    margin: 10px 0;
+    padding: 0;
+    color: #BA55D3;
+}
+
+.card .details .center ul{
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+}
+
+.card .details .center ul li{
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+
+.card .details .center ul li a{
+    display: block;
+    background: #BA55D3;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transition: .5s;
+}
+
+.card .details .center ul li a:hover{
+    background: #9370DB;
+}
